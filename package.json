@@ -1,0 +1,35 @@
+{
+  "name": "browserstack-examples-puppeteer",
+  "version": "1.0.0",
+  "description": "Browserstack Puppeteer",
+  "author": "Abhi Singh",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/browserstack/browserstack-examples-puppeteer"
+  },
+  "readme": "README.md",
+  "config": {
+    "parallel_count": "5"
+  },
+  "scripts": {
+    "test": "npm run parallel",
+    "single-default": "cross-env CAPS_TYPE=\"single\" mocha -- -g \"End to End Scenario\"",
+    "single": "cross-env CAPS_TYPE=\"single\" mocha",
+    "parallel": "cross-var cross-env CAPS_TYPE=\"parallel\" mocha --parallel --jobs $npm_package_config_parallel_count",
+    "local": "cross-var cross-env CAPS_TYPE=\"local\" mocha --parallel --jobs $npm_package_config_parallel_count"
+  },
+  "dependencies": {
+    "browserstack-local": "^1.5.1",
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "cross-var": "^1.1.0",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "puppeteer": "^17.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

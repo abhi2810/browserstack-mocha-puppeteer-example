@@ -1,0 +1,8 @@
+{
+    "package": "./package.json",
+    "timeout": "100000",
+    "recursive": true,
+    "spec": "src",
+    "reporter": "mochawesome",
+    "require": "src/test/utils/fixtures.js, mochawesome/register"
+  }
